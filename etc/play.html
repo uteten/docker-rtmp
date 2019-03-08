@@ -1,0 +1,33 @@
+<html lang="ja">
+<head>
+	<!-- 5.14 --> 
+	<link href="http://vjs.zencdn.net/7.4/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/7.4/video.js"></script>
+</head>
+</script>
+
+<style> video { object-fit: fill; } </style>
+<video id="rtmp_test" class="video-js vjs-default-skin" autoplay="autoplay" controls="controls" data-setup="{}" width="800" height="450">
+	<!-- edge -->
+	<!-- flash+rtmp(chrome,ie)-->
+	<script>
+	var KEY=location.hash.substr(1);
+	var HOST = location.host ;
+	document.write('<source src="http://'+HOST+'/live/hls/'+KEY+'.m3u8" type="application/x-mpegURL" />');
+	document.write('<source src="rtmp://'+HOST+'/live/'+KEY+'" type="rtmp/mp4" />');
+	</script>
+</video>
+
+<div>
+<script>
+	var KEY=location.hash;
+	document.write('<a href="play2.html'+KEY+'">== If you can not watch it, click ==</a>');
+</script>
+</div>
+<hr>
+<a href="memo.html">how to cast</a>
+
+
+
+</body>
+</html>

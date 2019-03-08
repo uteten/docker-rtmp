@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  rtmp:
+    build: .
+    image: uten/rtmp:latest
+    container_name: rtmp
+    ports:
+      - 127.0.0.1:1980:80
+      - 1935:1935
+
